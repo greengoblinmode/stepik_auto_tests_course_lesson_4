@@ -19,3 +19,7 @@ class LoginPageLocators():
     REGISTER_PASS_INPUT = (By.ID, "id_registration-password1")
 
     REGISTER_CONFIRM_PASS_INPUT = (By.ID, "id_registration-password2")
+
+
+class ProductPageLocators():
+    ADD_PRODUCT_BUTTON = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")

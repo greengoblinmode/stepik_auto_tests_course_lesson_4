@@ -8,9 +8,11 @@ class LoginPage(BasePage):
         # реализуйте проверку на корректный url адрес
         assert "login" in self.browser.current_url, "URL не содержит в себе искомую подстроку"
 
+
     def should_be_login_form(self):
         # реализуйте проверку, что есть форма логина
         assert self.browser.find_element(*LoginPageLocators.LOGIN_FORM), "Форма авторизации не отображается"
+
 
     def should_be_register_form(self):
         # реализуйте проверку, что есть форма регистрации на странице
