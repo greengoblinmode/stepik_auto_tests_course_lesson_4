@@ -7,9 +7,11 @@ class BasePageLocators():
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
 
-class MainPageLocators():
+class BasketPageLocators():
 
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_BUTTON = (By.XPATH, "//*[@class='btn btn-default' and text()='View basket']")
+
+    BASKET_STATUS = (By.ID, "content_inner")
 
 
 class LoginPageLocators():
@@ -27,6 +29,11 @@ class LoginPageLocators():
     REGISTER_PASS_INPUT = (By.ID, "id_registration-password1")
 
     REGISTER_CONFIRM_PASS_INPUT = (By.ID, "id_registration-password2")
+
+
+class MainPageLocators():
+
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
 class ProductPageLocators():
