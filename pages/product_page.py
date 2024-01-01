@@ -3,6 +3,7 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
+
     def add_product(self):
         add_button = self.browser.find_element(*ProductPageLocators.ADD_PRODUCT_BUTTON)
         add_button.click()
@@ -15,6 +16,16 @@ class ProductPage(BasePage):
     def get_supply_price(self):
         return self.browser.find_element(*ProductPageLocators.SUPPLY_PRICE).text
     
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ADD_NOTIFY), \
+       "Success message is presented, but should not be"
+
+
+    def should_lost_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.ADD_NOTIFY), \
+       "Success message is presented, but should not be"
+
 
     def check_add_notify(self, noti):
         NOTIFY_LOCATOR = self.browser.find_element(*ProductPageLocators.ADD_NOTIFY)

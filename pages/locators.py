@@ -2,10 +2,12 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators():
+
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
 class LoginPageLocators():
+
     LOGIN_FORM = (By.ID, "login_form")
 
     REGISTER_FORM = (By.ID, "register_form")
@@ -22,6 +24,7 @@ class LoginPageLocators():
 
 
 class ProductPageLocators():
+
     ADD_PRODUCT_BUTTON = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
 
     SUPPLY_NAME = [By.XPATH, "//div[@class='col-sm-6 product_main']//h1"]
