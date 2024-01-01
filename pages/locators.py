@@ -23,3 +23,7 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     ADD_PRODUCT_BUTTON = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
+
+    ADD_NOTIFY = [By.XPATH, "(//div[@class='alert alert-safe alert-noicon alert-success  fade in']//div[@class='alertinner '])[1]"]
+
+    BASKET_TOTAL = [By.XPATH, "//div[@class='alert alert-safe alert-noicon alert-info  fade in']//div[@class='alertinner ']//p[1]"]
