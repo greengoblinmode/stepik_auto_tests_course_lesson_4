@@ -9,9 +9,11 @@ def test_guest_can_go_to_login_page(browser):
     product_page = ProductPage(browser, url)
     main_page.open()                      # открываем страницу
     time.sleep(2)
+    supply_name = product_page.get_supply_name()
+    supply_price = product_page.get_supply_price()
     product_page.add_product()
     time.sleep(2)
     main_page.solve_quiz_and_get_code()
     time.sleep(2)
-    product_page.check_add_notify("The shellcoder's handbook has been added to your basket.")
-    product_page.check_basket_total("Your basket total is now £9.99")
+    product_page.check_add_notify(f"{supply_name} has been added to your basket.")
+    product_page.check_basket_total(f"Your basket total is now {supply_price}")
